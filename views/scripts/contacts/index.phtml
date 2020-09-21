@@ -1,0 +1,106 @@
+<div id="view-content">
+<section>
+    <header><span class="_header"></span><h2><?php echo $this->title;?></h2></header>
+</section>
+<div class="grid_20 _top"></div>
+<div class="grid_20">
+<section class="_search">
+<form id="searchform" class="form" method="post" action="/contacts/">
+<table>
+    <thead>
+    </thead>           
+    <tbody class="seacrh">
+        <tr>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="text" help="Firstname" name="CONTACT_FIRSTNAME" id="CONTACT_FIRSTNAME" value="" class="required _names _text" name="CLIENT_CD" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="text" help="Lastname" name="CONTACT_LASTNAME" id="CONTACT_LASTNAME" value=""  class="required _names _text" name="" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="text" help="E-mail" name="CONTACT_EMAIL" id="CONTACT_EMAIL"  value=""  class="required email _names _text" name="" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="submit" class="_submit submit" name="btn_search" value="Search" /></dd>
+                </dl>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+</table>
+</form>
+</section>
+
+<section class="contents">
+<div class="content_wrapper">
+<table>
+    <thead>
+        <tr>
+            <th colspan="5" class="btn"><a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                'action'=>'new',
+                                                ));?>">New Contact</a></td></th>
+        </tr>
+         <tr class="titles">
+            <th>Client /Company Name</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>E-mail</th>
+            <th class="action"></th>
+        </tr>
+    </thead>           
+    <tbody class="_contacts _table" id="_contact_list">
+
+    <?php foreach($this->paginator as $contact): ?>
+        <tr>
+            <td><?php echo $this->escape($contact['CLIENT_NAME']);?></td>
+            <td><?php echo $this->escape($contact['CONTACT_FIRSTNAME']);?></td>
+            <td><?php echo $this->escape($contact['CONTACT_LASTNAME']);?></td>
+            <td><?php echo $this->escape($contact['CONTACT_EMAIL']);?></td>
+            <td class="action">
+                <ul class="_actions">
+                <li>
+    			<a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                            'action'=>'edit',
+                                                            'ccd'=>$contact['CONTACT_CD']));?>" class="edit"></a>
+                </li>
+                <li>
+                <a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                            'action'=>'delete',
+                                                            'ccd'=>$contact['CONTACT_CD']));?>" class="remove"></a>
+                </li>
+                <li>
+    			<a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                            'action'=>'status',
+                                                            'ccd'=>$contact['CONTACT_CD']));?>" class="active_<?php echo $contact['CONTACT_ACTIVE']; ?>"></a>
+                                                            
+                </li>
+                </ul>
+            </td>
+        </tr>
+    <?php  endforeach;?>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
+</div>
+</section>
+<section class="pagi">
+
+		<?php
+		/*
+		* Print the pagination of type , drop down or search type or of your choice.
+		*/
+		echo $this->paginationControl($this->paginator,
+		                                    'Sliding',
+		                                    '/partials/pagination.phtml'); ?>
+
+</section>
+</div>
+</div>

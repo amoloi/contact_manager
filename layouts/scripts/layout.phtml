@@ -1,0 +1,60 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+	<head>
+	<?php /*echo $this->headLink()->appendStylesheet($this->baseUrl("/lib/jquery/themes/jquery.ui.all.css") );?>
+    <?php echo $this->headLink()->appendStylesheet($this->baseUrl("/lib/jquery/themes/jquery.ui.autocomplete.css") ); */?>
+<link href="/css/reset.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/text.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/1200.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/glyph/glyph.css" media="screen" rel="stylesheet" type="text/css" />
+
+<link href="/lib/jquery/themes/lightness/jquery.ui.all.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/lib/jquery/themes/lightness/jquery.ui.autocomplete.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/lib/jquery/autosuggest/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/lib/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="/lib/jquery/ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="/lib/jquery/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="/lib/jquery/ui/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="/lib/jquery/ui/jquery.ui.button.js"></script>
+<script type="text/javascript" src="/lib/jquery/ui/jquery.ui.draggable.js"></script>
+<script type="text/javascript" src="/lib/jquery/ui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="/lib/jquery/ui/jquery.ui.dialog.js"></script>
+
+<script type="text/javascript" src="/lib/jquery/maskedinput/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="/lib/jquery/validate/jquery.validate.js"></script>
+
+<!-- <script type="text/javascript" src="/lib/jquery/ui/jquery.autocomplete.js"></script>
+ <script type="text/javascript" src="/lib/jquery/jquery.autocomplete/jquery.autocomplete.js"></script> -->
+
+<script type="text/javascript" src="/lib/jquery/autosuggest/js/jquery.ausu-autosuggest.min.js"></script>
+
+<script type="text/javascript" src="/js/app.input.js"></script>
+<script type="text/javascript" src="/js/app.forms.js"></script>
+
+    <?php  echo $this->headScript()->prependFile($this->baseUrl("/js/app.js"));?>
+		<!--[if lte IE 9]>
+		<link rel="stylesheet" href="ie.css" />
+		<![endif]-->
+		
+		<title>Demo Project</title>
+	</head>
+<body>
+  <div class="container_20 application">
+  <div class="grid_20">
+	<header><h1 class="comp">Clients / Contact Manager ver 1.00a</h1></header>
+    <?php echo $this->render('app_menu.phtml'); ?>
+  </div>
+  <div class="grid_20 _top"></div>
+    <div class="_appcontent"><?php echo $this->layout()->content; ?></div>
+	<div class="grid_20 _bottom"></div>
+    <div class="grid_20">
+    <?php echo $this->render('app_menu.phtml'); ?>
+    </div>
+  <div class="grid_20">
+	<footer><h1 class="comp">Contact Manager ver 1.00a</h1></footer>
+  </div>
+  </div>
+</body>
+</html>

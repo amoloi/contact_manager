@@ -1,0 +1,70 @@
+<div id="view-content">
+<section>
+    <header><span class="_header"></span><h2><?php echo $this->title;?></h2></header>
+</section>
+<div class="grid_20 _top"></div>
+<div class="grid_20">
+<section class="contents _section">
+    <div class="content_wrapper">
+        	<form name="contact" class="frm_contact _form" action="/contacts/edit" method="post">
+        <fieldset>
+            <legend>Client`s Contact Details</legend>
+            <section id="_photo">
+				<dl class="input_wrapper">
+                    <dt>Photo</dt>
+                    <dd>
+						<div class="_photo">
+                
+						</div>
+					</dd>
+                </dl>
+            </section>
+            <div class="_details">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="hidden" name="CONTACT_CD" value="<?php echo $this->contact['CONTACT_CD']; ?>" /><input type="text" class="required _names _text" name="CONTACT_FIRSTNAME" value="<?php echo $this->contact['CONTACT_FIRSTNAME']; ?>" maxlength="80" /></dd>
+                </dl>
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="required _names _text" name="CONTACT_LASTNAME" value="<?php echo $this->contact['CONTACT_LASTNAME']; ?>" /></dd>
+                </dl>
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="required email _email _text" name="CONTACT_EMAIL" maxlength="120" value="<?php echo $this->contact['CONTACT_EMAIL']; ?>" /></dd>
+                </dl>
+                <dl class="input_wrapper">
+					<dt>Client / Company Name</dt>
+					<dd><input type="hidden" name="CLIENT_CD" value="<?php echo $this->contact['CLIENT_CD']; ?>" /><input type="text" class="_client _text" name="CLIENT_NAME" id="CLIENT_NAME" maxlength="100" value="<?php echo $this->contact['CLIENT_NAME']; ?>" /></dd>
+				</dl>
+            </div>
+        </fieldset>
+        <fieldset class="_operations">
+            <section>
+            <ul class="_actions">
+            <li>
+                <input type="submit" value="Save Changes" class="_submit _save" id="btn_save"/>
+            </li>
+            <li>
+			<a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                        'action'=>'status',
+                                                        'ccd'=>$this->contact['CONTACT_CD']));?>" class="active_1<?php echo $this->contact['CONTACT_ACTIVE']; ?>"><input type="button" value="Change Status" class="_button _status_<?php echo $this->contact['CONTACT_ACTIVE'];?>" id="btn_status"/></a></td>
+            </li>
+            <li>
+			<a href="/contacts/" class="edit1"><input type="button" value="Cancel" class="_button _cancel" id="btn_cancel"/></a>
+            </li>
+            <li>
+            <a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$this->contact['CONTACT_CD']));?>" class="remove1"><input type="button" value="Delete" class="_button _delete" id="btn_delete"/></a>
+            </li>
+
+            </ul>
+            
+            </section>
+        
+        </fieldset>
+        	</form>
+         </div>
+    </section>
+</div>
+</div>

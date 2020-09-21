@@ -1,0 +1,86 @@
+<div id="view-content">
+<section>
+    <header><span class="_header"></span><h2><?php echo $this->title;?></h2></header>
+</section>
+<div class="grid_20 _top"></div>
+<div class="grid_20">
+<section class="contents _section">
+<div class="content_wrapper">
+<form method="post" action="/clients/save" class="_form" id="frm_client">
+    <div class="error" style="display:none;">
+      <img src="images/warning.gif" alt="Warning!" width="24" height="24" style="float:left; margin: -5px 10px 0px 0px; " />
+
+      <span></span>.<br clear="all"/>
+    </div>
+<fieldset>
+            <div class="_details">
+<table>
+    <thead>
+    <tr>
+        <th colspan="12">
+        <dl class="input_wrapper client_contact">
+        <dt>Client's Name</dt>
+        <dd><input type="text" class="required _client _text" name="CLIENT_NAME" id="CLIENT_NAME" maxlength="100" /></dd>
+    </dl>
+        </th>
+    </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+                <dl class="input_wrapper client_contact">
+                    <dt>Seq</dt>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper client_contact">
+                    <dt>Firstname</dt>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper client_contact">
+                    <dt>Lastname</dt>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper client_contact">
+                    <dt>E-mail Adlress</dt>
+                </dl>
+            </td></td>
+        </tr>
+    </thead>           
+    <tbody class="contacts" id="_client_contact">
+
+
+    </tbody>
+    <tfoot>
+    <tr>
+            <th colspan="12" class="btn">
+                <input type="button" value="New Contact" class="_button button_new" id="btnnew" onclick="app.contact_row()"/>
+            </th>
+    </tr>
+    </tfoot>
+</table>
+
+  
+
+          
+            </div>
+        </fieldset>
+        <fieldset class="_operations">
+            <section>
+            <ul class="_actions">
+            <li>
+                <input type="submit" value="Save Client" class="_submit _save" id="btn_save"/>
+            </li>
+            <li>
+			<a href="/clients/" class="edit1"><input type="button" value="Cancel" class="_button _cancel" id="btn_cancel"/></a>
+            </li>
+            </ul>
+            
+            </section>
+        
+        </fieldset>
+            </form>
+        </div>
+    </section>
+</div>
+</div>

@@ -1,0 +1,105 @@
+
+<div id="view-content">
+<section>
+    <header><span class="_header"></span><h2><?php echo $this->title;?></h2></header>
+</section>
+<div class="grid_20 _top"></div>
+<div class="grid_20">
+<script type="text/javascript">
+$(document).ready(function() {
+    $.fn.autosugguest({  
+           className: 'ausu-suggest',
+          methodType: 'POST',
+            minChars: 4,
+              rtnIDs: true,
+            dataFile: '/contacts/clients'
+    });
+});
+</script>
+<section class="_search">
+</section>
+<section class="contents">
+<div class="content_wrapper">
+<form action="/contacts/save" method="post">
+<table class="_table" id="_detail">
+    <thead>
+        <tr>
+            <th colspan="14" class="btn"><input type="hidden" name="CLIENT_CD" value="<?php echo $this->code;?>" />
+            <input type="button" value="New Contact" class="_button button_new" id="btn_new"/></th>
+        </tr>
+        <tr>
+        	<th colspan="">Seq</th>
+            <th colspan="3">Firstname</th>
+            <th colspan="3">Lastname</th>
+            <th colspan="3">E-mail</th>
+            <th colspan="3">Client</th>
+            <th class="action"></th>
+        </tr>
+    </thead>           
+    <tbody id="new_contact" class="tbl_new_contact">
+        <tr class="_new_rows _hide" id="row_<?php echo $this->number ;?>">
+            <td colspan="" class="_counter">
+            <span class="_numbers">1</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper client_contact">
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper client_contact">
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper client_contact">
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper client_contact">
+                    <dd>
+			<div class="ausu-suggest">
+						<input type="text" class="_names _text _autocomplete" id="CLIENT_NAME_0" autocomplete="off" name="CLIENT_NAME" />
+                    	<input type="hidden" id="CLIENT_CD_<?php echo $this->number ;?>" class="CLIENT_CD" name="CLIENT_CD[]" />	
+           </div>
+
+                    </dd>
+                </dl>
+            </td>
+            <td class="action">
+                <ul class="_actions">
+				<li>
+					<a href="#" class="remove" id="btn_<?php echo $this->number ; ?>" title="Click to Delete" onclick="app.name_remove(this.id);"></a>
+				</li>
+				</ul>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+    <th colspan="14" class="btn bottom"><input type="button" value="New Contact" class="_button _button_new" onclick="app.new_contact_row();" id="btn_new"/> </th>
+    
+    </tr>
+    </tfoot>
+</table>
+        <fieldset class="_operations">
+            <section>
+            <ul class="_actions">
+            <li>
+                <input type="submit" value="Save Changes" class="_submit _save" id="btn_save"/>
+            </li>
+            <li>
+			<a href="/contacts/" class="edit1"><input type="button" value="Cancel" class="_button _cancel" id="btn_cancel"/></a>
+            </li>
+
+            </ul>
+            
+            </section>
+        
+        </fieldset>
+</form>
+</div>
+</section>
+</div>
+</div>

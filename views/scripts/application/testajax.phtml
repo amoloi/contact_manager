@@ -1,0 +1,34 @@
+<table>
+    <thead>
+    </thead>           
+    <tbody class="contacts" id="contacts">
+        <tr class="_new_rows _hide" id="row_<?php echo $this->number ;?>">
+            <td class="fname" colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td class="lname" colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" value="" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action">
+				<ul class="_actions">
+				<li>
+				<a href="#" class="remove" id="btn_<?php echo $this->number ; ?>" title="Click to Delete" onclick="app.name_remove(this.id);"></a>
+				</li>
+				<li>
+				<a href="#" class="active_<?php echo $contacts['CONTACT_ACTIVE']; ?>" title="Click to Edit" ></a></td>
+				</li>
+				</ul>
+			</td>
+        </tr>
+    </tbody>
+    <tfoot>
+</table>

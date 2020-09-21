@@ -1,0 +1,79 @@
+<div id="view-content">
+<section>
+    <header><span class="_header"></span><h2><?php echo $this->title;?></h2></header>
+</section>
+<div class="grid_20 _top"></div>
+<div class="grid_20">
+<section class="_search">
+</section>
+<section class="contents">
+<div class="content_wrapper">
+<form action="/contacts/save" method="post">
+<table class="_table" id="_detail">
+    <thead>
+        <tr>
+            <th colspan="3">Firstname</th>
+            <th colspan="3">Lastname</th>
+            <th colspan="3">E-mail</th>
+            <th class="action"></th>
+        </tr>
+    </thead>           
+    <tbody id="new_contact">
+    <?php foreach($this->contacts as $contacts): ?>
+        <tr>
+            <td class="fname" colspan="3"><?php echo $this->escape($contacts['CONTACT_FIRSTNAME']);?></td>
+            <td class="lname" colspan="3"><?php echo $this->escape($contacts['CONTACT_LASTNAME']);?></td>
+            <td class="email" colspan="3"><?php echo $this->escape($contacts['CONTACT_EMAIL']);?></td>
+            <td class="action">
+            <ul class="_actions">
+            <li>
+			<a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$contacts['CONTACT_CD']));?>" title="Click to Edit" class="edit"></a>
+            </li>
+            <li>
+            <a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$contacts['CONTACT_CD']));?>" class="remove" title="Click to Delete"></a>
+            </li>
+            <li>
+			<a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                        'action'=>'status',
+                                                        'ccd'=>$contacts['CONTACT_CD']));?>" class="active_<?php echo $contacts['CONTACT_ACTIVE']; ?>" title="Click to Edit" ></a></td>
+            </li>
+            </ul>
+        </tr>
+    <?php  endforeach;?>
+    </tbody>
+    <tfoot>
+    <tr>
+    <th colspan="10" class="btn bottom"><input type="hidden" name="CLIENT_CD" value="<?php echo $this->code;?>" /><input type="button" value="New Contact" class="_button button_new" id="btn_new"/> </th>
+    
+    </tr>
+    </tfoot>
+</table>
+        <fieldset class="_operations">
+            <section>
+            <ul class="_actions">
+            <li>
+                <input type="submit" value="Save Changes" class="_submit _save" id="btn_save"/>
+            </li>
+            <li>
+			<a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                        'action'=>'status',
+                                                        'ccd'=>$this->contact['CONTACT_CD']));?>" class="eactive_<?php echo $this->contact['CONTACT_ACTIVE']; ?>"><input type="button" value="Change Status" class="_button _status_<?php echo $this->contact['CONTACT_ACTIVE'];?>" id="btn_status"/></a></td>
+            </li>
+            <li>
+			<a href="/contacts/" class="edit1"><input type="button" value="Cancel" class="_button _cancel" id="btn_cancel"/></a>
+            </li>
+
+            </ul>
+            
+            </section>
+        
+        </fieldset>
+</form>
+</div>
+</section>
+</div>
+</div>

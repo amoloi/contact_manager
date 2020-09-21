@@ -1,0 +1,32 @@
+<div id="view-content">
+<section>
+    <header><span class="_header"></span><h2><?php echo $this->title;?></h2></header>
+</section>
+<div class="grid_20 _top"></div>
+<div class="grid_20">
+<section class="_search">
+</section>
+<section class="contents">
+
+            <ul class="ul_home">
+            <li class="li_clients">
+            <a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'index',
+                                                        ));?>" class="a_clients">Clients</a>
+            </li>
+            <li class="li_contact">
+			<a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                        ));?>" class="a_contact">Contacts</a>
+            </li>
+            <li class="li_emp">
+            <a href="<?php echo $this->url(array('controller'=>'employees',
+                                                        ));?>" class="_reserved">Reserved</a>
+            </li>
+            <li class="li_partners">
+			<a href="<?php echo $this->url(array('controller'=>'partners',
+                                                        ));?>" class="a_emp">Employees</a></td>
+            </li>
+            </ul>
+</section>
+</div>
+</div>

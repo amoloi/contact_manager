@@ -1,0 +1,95 @@
+<div id="view-content">
+<section>
+    <header><span class="_header"></span><h2><?php echo $this->title;?></h2></header>
+</section>
+<div class="grid_20 _top"></div>
+<div class="grid_20">
+<section class="_search">
+<form id="searchform" class="form" method="post" action="/clients/">
+<table>
+    <thead>
+    </thead>           
+    <tbody class="seacrh">
+        <tr>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="text" id="CLIENT_CD" help="Client Code" value="" class="_names _text" name="CLIENT_CD" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="text" id="CLIENT_NAME" help="Client Name" value="" class="_names _text" name="CLIENT_NAME" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dd><input type="submit" class="_submit submit" name="btn_search" value="Search" /></dd>
+                </dl>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+</table>
+</form>
+</section>
+<section class="contents">
+<div class="content_wrapper">
+<table>
+    <thead>
+        <tr class="titles">
+            <th>Code</th>
+            <th colspan="6">Name</th>
+            <th class="action"></th>
+        </tr>
+    </thead>           
+    <tbody>
+    <?php foreach($this->paginator as $client): ?>
+        <tr class="">
+            <td><?php echo $this->escape($client['CLIENT_CD']);?></td>
+            <td colspan="6"><?php echo $this->escape($client['CLIENT_NAME']);?></td>
+            <td class="action">
+            <ul class="_actions">
+            <li>
+            <a href="<?php echo $this->url(array('controller'=>'contacts',
+                                                        'action'=>'details',
+                                                        'ccd'=>$client['CLIENT_CD']));?>" class="contact"></a>
+            </li>
+            <li>
+			<a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>" class="edit"></a>
+            </li>
+            <li>
+            <a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>" class="remove"></a>
+            </li>
+            <li>
+			<a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>" class="active_<?php echo $client['CLIENT_ACTIVE']; ?>"></a></td>
+            </li>
+            </ul>
+        </tr>
+    <?php endforeach;?>
+    </tbody>
+    <tfoot>
+    <th colspan="8" class="btn bottom"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                'action'=>'new',
+                                                ));?>">New client</a></td></th>
+    </tfoot>
+</table>
+</section>
+<section class="pagi">
+
+		<?php
+		/*
+		* Print the pagination of type , drop down or search type or of your choice.
+		*/
+		echo $this->paginationControl($this->paginator,
+		                                    'Sliding',
+		                                    '/partials/pagination.phtml'); ?>
+
+</section>
+</div>
+</div>

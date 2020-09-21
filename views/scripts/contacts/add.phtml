@@ -1,0 +1,374 @@
+<div id="view-content">
+<section>
+    <header><span class="_header"></span><h2><?php echo $this->title;?></h2></header>
+</section>
+<form method="post" action="/contacts/save/" id="frm_contact" class="_form">
+    <dl class="input_wrapper">
+        <dt>Clients Name</dt>
+        <dd class="_client">
+        <?php echo $this->client['CLIENT_NAME'];?><input type="hidden" class="_client _text" name="CLIENT_NAME" id="CLIENT_NAME" maxlength="100" value="<?php echo $this->$CLIENT_CD;?>" />
+        <input type="hidden" class="_client _text" name="CLIENT_CD" id="CLIENT_CD" maxlength="8" value="<?php echo $this->client['CLIENT_CD']; ?>" /></dd>
+    </dl>
+	<section class="_section">
+        <fieldset>
+            <legend>Client`s Contact Details</legend>
+<div class="_details">
+<table>
+    <thead>
+        <tr>
+            <th colspan="12" class="btn"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                'action'=>'new',
+                                                ));?>">New client</a></td></th>
+        </tr>
+    </thead>           
+    <tbody class="contacts">
+        <tr>
+            <td colspan="2" class="_counter">
+            <span class="_numbers">1</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="required _names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="required _names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="required email _email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Edit</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Delete</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Status</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+            <span class="_numbers">2</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Edit</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Delete</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Status</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+            <span class="_numbers">3</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>"><img title="Click to Edit" src="/images/icons/edit.png" /></a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>"><img title="Click to Delete" src="/images/icons/delete.png" /></a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>"><img title="Click to Delete" src="/images/icons/activ_<?php echo $client['CLIENT_ACTIVE']; ?>.png" /></a></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+           <span class="_numbers">4</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Edit</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Delete</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Status</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+            <span class="_numbers">5</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Edit</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Delete</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Status</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+            <span class="_numbers">6</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Edit</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Delete</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Status</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+            <span class="_numbers">7</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Edit</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Delete</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Status</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+            <span class="_numbers">8</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Edit</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Delete</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Status</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+            <span class="_numbers">9</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Edit</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Delete</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Status</a></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="_counter">
+                <span class="_numbers">10</span>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Firstname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_FIRSTNAME[]" maxlength="80" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>Lastname</dt>
+                    <dd><input type="text" class="_names _text" name="CONTACT_LASTNAME[]" /></dd>
+                </dl>
+            </td>
+            <td colspan="3">
+                <dl class="input_wrapper">
+                    <dt>E-mail Adlress</dt>
+                    <dd><input type="text" class="_email _text" name="CONTACT_EMAIL[]" maxlength="120" /></dd>
+                </dl>
+            </td>
+            <td class="action"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'edit',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Edit</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'delete',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Delete</a>
+            <span class="separator">|</span><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                        'action'=>'status',
+                                                        'ccd'=>$client['CLIENT_CD']));?>">Status</a></td>
+        </tr>
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <th colspan="12" class="btn bottom"><a href="<?php echo $this->url(array('controller'=>'clients',
+                                                'action'=>'new',
+                                                ));?>">New client</a></th>
+    
+    </tr>
+    <tr>
+        <th colspan="12" class="btn bottom">
+            <ul class="_actions _right">
+                <li><input type="submit" value="Save Contact Details" id="btn_save" class="_submit"/></li>
+                <li><input type="button" value="Cancel" id="btn_cancel" class="_button"/></li>
+            </ul>
+        </th>
+    
+    </tr>
+
+    </tfoot>
+</table>
+
+  
+
+          
+            </div>
+        </fieldset>
+    </section>
+</form>
+</div>
