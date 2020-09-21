@@ -1,30 +1,34 @@
-README
-======
+Auction Application - Auction
+=============================
 
-This directory should be used to place project specfic documentation including
-but not limited to project notes, generated API/phpdoc documentation, or
-manual files generated or hand written.  Ideally, this directory would remain
-in your development environment only and should not be deployed with your
-application to it's final production location.
+Introduction
+------------
+Hold your breath, this is carries memories as one of the few applications that I had to develop as part of the technical job interview - Demonstration of Skills they say (Talk is cheap apparently). 
+The mini Contact Manager was developed in fulfilment of the then potential employer requirements at the time of the interview. This forms part of many small to large scale applications that I had to develop as a proof of concept and skills to a number of compenies (petential employers and clients). The longest was a proof of concept on an Online Company Registration System with ontegration to a number of legacy back end systems (Unfortunately, the code base wont be shared here, and for obvious reasons).
+The Contact manager application was/is built on top of the ZF1 MVC layer on a single module architecture.
+
+Kindly note, Zend Framework has evolved ever since, from ZF1, ZF2, ZF3 and now [Laminas](https://getlaminas.org "Laminas's Homepage"). 
+
+Zend Framework was provided by [Zend Technologies.](https://framework.zend.com/ "Zend Framework's Homepage")
+
+The future
+-----------
+I am not yet sure of the direction to take this, currently I have embarked on a journey with more modern , challenging and exciting technologies that offers more potentil for building futuristic mult-platforms applicatios.
+
+Or, perhaps this code base will not evolve futher, perhaps I will just prefeer keeping it they it is a reminder to once humbler beginings, chances taken and opportunities given, sitting in a beautifull office, surrounded by beutiful souls with a cup of coffee next to me just doing what coders do - prove their worhthy ! This is a reminder to me  of the beautiful interview sessions that I have ever sat in.
+
+Installation
+------------
+
+Details to be provided later as time allows.
 
 
-Setting Up Your VHOST
-=====================
+Database
+--------
+Details to be provided later as time allows.
 
-The following is a sample VHOST you might want to consider for your project.
+Virtual Host
+------------
+Details to be provided later as time allows.
 
-<VirtualHost *:80>
-   DocumentRoot "F:/ZENDSERVER/Apache2/htdocs/bcdemo/public"
-   ServerName .local
 
-   # This should be omitted in the production environment
-   SetEnv APPLICATION_ENV development
-
-   <Directory "F:/ZENDSERVER/Apache2/htdocs/bcdemo/public">
-       Options Indexes MultiViews FollowSymLinks
-       AllowOverride All
-       Order allow,deny
-       Allow from all
-   </Directory>
-
-</VirtualHost>
