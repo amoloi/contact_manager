@@ -1,0 +1,453 @@
+* ul{
+    list-style: none;
+}
+* ul li{
+    float: left;
+}
+* a{
+    text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    background: /*url("../images/structure/bodybg.jpg")*/ repeat scroll 0 0 #979fa9/* #161e25*/;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+table{
+    width: 100%;
+    /*margin: auto 15px auto 15px;*/
+}
+tbody tr{
+    border-top: 1px solid #b6b6b6;
+    border-bottom: 1px solid #b6b6b6;
+}
+tbody td.action{
+    /*width: 200px;*/
+}
+
+tbody td,th {
+    height: 25px;
+    line-height: 25px;
+    padding: 5px;
+    vertical-align: middle;
+}
+thead th{
+    text-align: left;
+}
+/*tbody.contacts td {
+    height: 25px;
+    line-height: 25px;
+    padding: 0;
+}*/
+tbody.contacts td {
+    height: 25px;
+    line-height: 25px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.separator{
+    
+}
+.content_wrapper {
+    margin: auto 15px;
+}
+/*._operations{
+  margin: 20px;
+  padding-right: 7px;  
+}*/
+._operations {
+    margin: 20px auto;
+    padding-right: /*7*/5px;
+}
+tbody td a{
+    margin: 0 5px 0 5px;
+}
+.btn{
+    text-align: right;
+}
+tfoot th{
+    padding-top: 5px;
+}
+header h1,
+section header h2{
+    margin: 0;
+}
+._delete {
+    background: url("../images/icons/delete.png") no-repeat scroll 0 center;
+    width: 100px;
+}
+.button_new{
+    background: url("../images/icons/plus.png") no-repeat scroll 0 center transparent;
+}
+._save {
+    background: url("../images/icons/save.png") no-repeat scroll 0 center;
+   /* width: 100px;*/
+}
+._status_0{
+    background: url("../images/icons/active_0.png") no-repeat scroll 0 center;
+}
+._status_1{
+    background: url("../images/icons/active_1.png") no-repeat scroll 0 center;
+}
+._cancel{
+    background: url("../images/icons/backward.png") no-repeat scroll 0 center;
+}
+/*input[type=submit],
+input[type=button]{
+    background-color: #B6B6B6;
+    height: 35px;
+    padding-left: 30px;
+}*/
+input[type="submit"], input[type="button"] {
+    background-color: #B6B6B6;
+    height: 35px;
+    padding-left: 30px;
+    width: 120px;
+    cursor: pointer;
+}
+header h1.comp {
+    background: url("../images/structure/logo.png") no-repeat scroll 0 0 #2c94cf;
+    height: 72px;
+    line-height: 72px;
+    margin: 0;
+    padding-left: 125px;
+}
+/*._counter span {
+    background: none repeat scroll 0 0 #2C94CF;
+    border-radius: 30px 30px 30px 30px;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    margin: auto 5px auto auto;
+}*/
+/*._counter span {
+    background: none repeat scroll 0 0 #2C94CF;
+    border: 3px solid #B6B6B6;
+    border-radius: 30px 30px 30px 30px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 5px auto auto;
+    text-align: center;
+    width: 30px;
+}*/
+._counter span {
+    background: none repeat scroll 0 0 #2C94CF;
+    border: 3px solid #B6B6B6;
+    border-radius: 25px 25px 25px 25px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    margin: auto 5px auto auto;
+    text-align: center;
+    width: 25px;
+}
+._photo {
+    border: 1px dotted #B6B6B6;
+    height: 204px;
+    width: 204px;
+}
+.seacrh{}
+.seacrh{}
+._search table {
+    margin-bottom: 0;
+    width: 53%;
+}
+footer {
+    background: none repeat scroll 0 0 #2C94CF;
+    height: 65px;
+    line-height: 65px;
+}
+/*.contents {
+    background: none repeat scroll 0 0 #e4e4e4355067;
+    overflow: hidden;
+}*/
+.contents {
+    background: none repeat scroll 0 0 #E4E4E4;
+    color: grey;
+    font-family: verdana,arial,helvetica;
+    font-size: 1.1em;
+    letter-spacing: 0.2px;
+    overflow: hidden;
+}
+/*dd ._text {
+    font-size: 1.4em;
+    height: 32px;
+    line-height: 32px;
+    padding: 5px;
+}*/
+dd ._text {
+    border: 3px solid #E0E0E0;
+    color: gray;
+    font-size: 1.1em;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+}
+input[type=text]:focus{
+    background: yellow;
+    color: #000;
+    border-color: #2C94CF;
+}
+tr.titles {
+    background: url("../images/structure/thbg.jpg") repeat scroll 0 0 transparent;
+}
+.client_contact.input_wrapper {
+    margin: 2px;/*5px;*/
+}
+dd ._names{
+   width: 240px; 
+}
+dd ._email{
+   width: 400px; 
+}
+.input_wrapper{
+    margin-bottom: 0;  
+}
+dd._client {
+    color: #FF9900;
+    font-size: 20px;
+}
+/*dd ._client {
+    width: 615px;
+}*/
+dd ._client {
+    width: 558px;
+}
+._new_rows dd ._email {
+    width: 400px;
+}
+td.email{
+    width: 400px;
+}
+._show{
+    display: none;
+}
+td.lname,
+td.fname{
+    width: 255px;
+}
+._new_rows dd ._text {
+    font-size: 1.4em;
+    height: 24px;
+    line-height: 24px;
+    padding: 5px;
+}
+.tbl_new_contact{}
+.tbl_new_contact ._new_rows dd ._email {
+    width: 270px;
+}
+.tbl_new_contact dd ._names {
+    width: 200px;
+}
+/*._actions{
+    list-style: none;
+}*/
+._actions {
+    list-style: none outside none;
+    margin: auto auto auto 30px;
+    float: right;
+}
+/*._actions li{
+    list-style: none;
+    float: left;
+    margin: 0;
+}*/
+._actions li {
+    float: left;
+    list-style: none outside none;
+    margin-left: 10px;
+}
+/*........................*/
+._right{
+    float: right;
+}
+._operations ul{
+    float: right;
+}
+._photo {
+    border: 1px dotted #B6B6B6;
+    height: 210px;
+    width: 210px;
+}
+#_photo{
+    float: left;
+}
+#_photo dl{
+    margin: auto 20px auto auto;
+}
+dt{
+    font-size: 1.1em;
+}
+.paginationControl * {
+    outline: none;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.paginationControl .next, .paginationControl .previous {
+    width: 93px;
+}
+.paginationControl .page, .paginationControl .current {
+    width: 35px;
+}
+.paginationControl .page {
+    background: url("../../images/structure/pagination.png") no-repeat scroll -230px 1px transparent;
+    font-weight: bold;
+}
+.paginationControl .current {
+    background: url("../../images/structure/pagination.png") no-repeat scroll -95px 1px transparent;
+    color: gray;
+    font-weight: bold;
+    text-decoration: none;
+}
+.paginationControl .next.disabled {
+    background: url("../../images/structure/pagination.png") no-repeat scroll -410px -39px transparent;
+    color: grey;
+}
+.paginationControl .disabled {
+    background: url("../../images/structure/pagination.png") repeat scroll 0 0 transparent;
+}
+.paginationControl .previous {
+    background: url("../../images/structure/pagination.png") repeat scroll 2px 37px transparent;
+    color: #2C94CF;
+    font-weight: bold;
+    padding-left: 7px;
+    text-decoration: none;
+}
+.paginationControl .previous.disabled {
+    background: url("../../images/structure/pagination.png") repeat scroll 3px 1px transparent;
+    color: grey;
+}
+.paginationControl .next {
+    background: url("../../images/structure/pagination.png") repeat scroll 100px 1px transparent;
+    color: #2C94CF;
+    font-weight: bold;
+    text-decoration: none;
+}
+.paginationControl {
+    margin: 20px auto;
+}
+.paginationControl a{
+     background: url("../../images/structure/pagination.png") repeat scroll 0 0 transparent;
+}
+.error{
+    color: #ffb3a6;
+}
+input.error {
+    background: none repeat scroll 0 0 #FFB3A6;
+    border: 3px solid red;
+}
+._bottom,
+._top {
+    background: url("../../images/structure/boxes.png") repeat scroll 0 0 transparent;
+    height: 13px;
+}
+._appcontent{
+    
+}
+.ul_home{
+    list-style: none;
+    height: 450px;
+}
+.ul_home li {
+    float: left;
+    height: 160px;
+    margin: 5px;
+    width: 280px;
+    opacity: 0.5;
+}
+.ul_home li:hover{
+    opacity: 1;
+}
+.ul_home li a {
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: arial;
+    font-size: 2.3em;
+    height: 160px;
+    line-height: 90px;
+    padding-left: 25px;
+    vertical-align: middle;
+    width: 255px;
+}
+.ul_home .li_clients {
+    background: url("../../images/structure/home_menu.png") no-repeat scroll -19px 0 transparent;
+}
+.ul_home .li_clients {
+    background: url("../../images/structure/home_menu.png") no-repeat scroll -19px 0 transparent;
+}
+.ul_home .li_emp {
+    background: url("../../images/structure/home_menu.png") no-repeat scroll -16px -169px transparent;
+}
+.ul_home .li_partners {
+    background: url("../../images/structure/home_menu.png") no-repeat scroll -15px -169px transparent;
+}
+.ul_home .li_contact {
+    background: url("../../images/structure/home_menu.png") no-repeat scroll -300px 0 transparent;
+}
+
+/* Menu */
+.ul_mhome {
+    float: right;
+    margin: 0 15px 0 0;
+}
+.ul_mhome li {
+    height: 22px;
+    margin: 5px;
+    opacity: 0.5;
+    padding-left: 20px;
+    width: 101px;
+}
+.ul_mhome li:hover{
+    opacity: 1;
+}
+.ul_mhome li a {
+    color: #2C94CF;
+    display: inline-block;
+    font-family: arial;
+    font-size: 1.2em;
+    height: 25px;
+    line-height: 19px;
+    padding-left: 25px;
+    vertical-align: middle;
+    width: 100px;
+}
+.ul_mhome .m_clients {
+    background: url("../../images/structure/app_menu.png") no-repeat scroll -19px 0 transparent;
+}
+.ul_mhome .m_clients {
+    background: url("../../images/structure/app_menu.png") no-repeat scroll 0 -1px transparent;
+}
+.ul_mhome .m_emp {
+    background: url("../../images/structure/app_menu.png") no-repeat scroll -1px -25px transparent;
+}
+.ul_mhome .m_partners {
+    background: url("../../images/structure/app_menu.png") no-repeat scroll -1px -75px transparent;
+}
+.ul_mhome .m_contact {
+    background: url("../../images/structure/app_menu.png") no-repeat scroll -1px -50px transparent;
+}
+.ul_mhome .m_home {
+    background: url("../../images/structure/app_menu.png") no-repeat scroll -1px -100px transparent;
+}
+input[name=btn_search]{
+    background: url("../images/structure/search.png") no-repeat scroll 0 center transparent;
+}
+#view-content{
+    
+}
+
