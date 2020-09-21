@@ -13,7 +13,7 @@ Zend Framework was provided by [Zend Technologies.](https://framework.zend.com/ 
 
 The future
 -----------
-I am not yet sure of the direction to take this, currently I have embarked on a journey with more modern , challenging and exciting technologies that offer more potential for building futuristic distributed mult-platforms applicatios.
+I am not yet sure of the direction to take this, currently I have embarked on a journey with more modern , challenging and exciting technologies that offer more potential for building futuristic distributed mult-platforms applications.
 
 Or, perhaps this code base will not evolve futher, perhaps I will just keeping it they way it is as reminder to once humble beginings, chances taken and opportunities given, sitting in a beautifull office, surrounded by beutiful souls with a cup of coffee next to me just doing what coders do - prove their worhthy ! This is a reminder to me of the beautiful interview sessions that I have ever sat in.
 
